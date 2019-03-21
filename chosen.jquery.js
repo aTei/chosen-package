@@ -904,7 +904,7 @@
       this.clear_backstroke();
       this.show_search_field_default();
       this.search_field_scale();
-      return this.search_field.blur();
+      return this.search_field.trigger('blur');
     };
 
     Chosen.prototype.activate_field = function() {
@@ -914,7 +914,7 @@
       this.container.addClass("chosen-container-active");
       this.active_field = true;
       this.search_field.val(this.search_field.val());
-      return this.search_field.focus();
+      return this.search_field.trigger('focus');
     };
 
     Chosen.prototype.test_active_click = function(evt) {
